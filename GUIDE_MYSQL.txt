@@ -1,0 +1,54 @@
+=====================================================
+  GUIDE COMPLET : RÉSOUDRE LE PROBLÈME MYSQL
+=====================================================
+
+DIAGNOSTIC :
+Vous avez l'erreur "Accès refusé pour l'utilisateur ''@'localhost'"
+Cela signifie que phpMyAdmin n'est pas connecté avec root.
+
+=====================================================
+SOLUTION 1 : SE RECONNECTER À PHPMYADMIN
+=====================================================
+
+1. DÉCONNECTEZ-VOUS de phpMyAdmin (cliquez sur "Déconnexion")
+
+2. RECONNECTEZ-VOUS avec ces identifiants :
+   - Utilisateur : root
+   - Mot de passe : (laissez vide si vous n'avez pas de mot de passe)
+
+3. Une fois connecté en tant que root, exécutez :
+   CREATE DATABASE exercice1_db;
+
+=====================================================
+SOLUTION 2 : CRÉER VIA L'INTERFACE PHPMYADMIN
+=====================================================
+
+1. Dans phpMyAdmin, sur la page d'accueil
+2. Cherchez la section "Créer une base de données"
+3. Tapez : exercice1_db
+4. Cliquez sur "Créer"
+
+NE PAS exécuter de commande GRANT - juste créer la base !
+
+=====================================================
+SOLUTION 3 : UTILISER H2 TEMPORAIREMENT
+=====================================================
+
+Si MySQL continue à poser problème, j'ai déjà configuré
+une base de données H2 (en mémoire) qui fonctionne
+immédiatement sans configuration.
+
+Pour l'utiliser, je vais modifier application.properties
+automatiquement pour vous.
+
+=====================================================
+SOLUTION 4 : VÉRIFIER XAMPP/MAMP
+=====================================================
+
+1. Assurez-vous que MySQL est bien démarré dans XAMPP/MAMP
+2. Ouvrez phpMyAdmin depuis le panneau de contrôle XAMPP/MAMP
+3. Vérifiez que vous êtes connecté en tant que "root"
+   (regardez en haut à droite de phpMyAdmin)
+
+=====================================================
+
